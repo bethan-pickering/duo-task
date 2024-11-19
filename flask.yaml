@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: bethanpickering/trio-task-flaskapp:latest
+        image: bethanpickering/duo-task:latest
         ports:
         - containerPort: 5500
 ---
