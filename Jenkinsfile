@@ -75,7 +75,7 @@ pipeline {
                     } else if ( env.GIT_BRANCH == 'origin/dev'){
                         sh'''
                         kubectl apply -f ./kubernetes -n dev
-                        kubectl set image deployment/flask-deployment flask-container=bethanpickering/duo-jenk:v${BUILD_NUMBER} -n prod
+                        kubectl set image deployment/flask-deployment flask-container=bethanpickering/duo-jenk:v${BUILD_NUMBER} -n dev
                         '''
                     } else {
                         sh 'echo "unrecogognised branch"'
